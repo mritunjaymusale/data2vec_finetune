@@ -127,3 +127,26 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+*.jpg
+*.png
+bdd100k
+lightning_logs
+.vscode
+cityscapes
+
+*.txt
+*.tar.gz
+IDD_Segmentation
+IDD
+public-code
+
+*.pkl
+*.pth
+*.ckpt
+
+*lightning_logs
+results
+vision
+demo_data
+plotting_data

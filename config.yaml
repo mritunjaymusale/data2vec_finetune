@@ -1,0 +1,39 @@
+cityscapes:
+    data_hparams:
+        data_data_src: ./cityscapes
+        data_batch_size: 75
+        data_image_resize_size: 224
+        data_num_workers: 4
+        data_persistent_workers: True
+        data_pin_memory: True
+        data_shuffle: True
+        # Number of classes (inc 0 and 255, 18 are actaully classes)
+        data_num_classes: 20
+idd:
+    data_hparams:
+        data_data_src: ./IDD
+        data_batch_size: 75
+        data_image_resize_size: 224
+        data_num_workers: 4
+        data_persistent_workers: True
+        data_pin_memory: True
+        data_shuffle: True
+        data_num_classes: 27
+
+trainer_settings:
+    # fast_dev_run: True
+    accelerator: gpu
+    devices: 1
+    limit_train_batches: 1.0
+    # set epochs using the bottom two option
+    # max_epochs : -1
+    max_epochs: 229
+    precision: 16
+    amp_backend: native
+    detect_anomaly: True
+    # enable/disable as needed
+    max_time:
+        hours: 24
+        minutes: 0
+        seconds: 0
+    log_every_n_steps: 20
